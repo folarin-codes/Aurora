@@ -3,6 +3,7 @@ import styles from './styles'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import COLORS from '../constants/Colors';
 import Button from '../components/Button';
+import { router } from 'expo-router';
 
 
 const Page = ()=>{
@@ -28,7 +29,13 @@ const Page = ()=>{
            <View style={{marginTop:40}}>
 
 
-            <Button text={'Continue with Email'}/>
+            <Button onPress={()=>{
+
+            router.navigate('/signUp')
+
+
+
+            }} text={'Continue with Email'}/>
 
            </View>
 

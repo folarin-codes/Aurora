@@ -16,6 +16,7 @@ export default function RootLayout() {
     PoppinsRegular : require('../assets/fonts/Poppins-Regular.ttf'),
     PoppinsBold: require('../assets/fonts/Poppins-Bold.ttf'),
     semibold : require('../assets/fonts/Poppins-SemiBold.ttf'),
+    medium : require('../assets/fonts/Poppins-Medium.ttf'),
 
   });
 
@@ -31,10 +32,14 @@ export default function RootLayout() {
 
   return (
     
-      <Stack>
-        <Stack.Screen name='index' options={{headerShown:false}}/>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack screenOptions={{
+        headerShown:false
+      }}>
+        <Stack.Screen name='index' />
+        <Stack.Screen name='(auth)' />
+        <Stack.Screen name="(tabs)" />
         <Stack.Screen name="+not-found" />
       </Stack>
   );
 }
+
