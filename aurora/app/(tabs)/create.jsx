@@ -5,7 +5,7 @@ import { StyleSheet, Image, Platform, View , Text } from 'react-native';
 export default function TabTwoScreen() {
   return (
     <View>
-      <Text>Hell world</Text>
+      <Text>Hell world Create</Text>
     </View>
     
   );

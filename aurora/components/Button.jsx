@@ -3,10 +3,11 @@ import COLORS from "../constants/Colors";
 
 
 
-const Button = ({text, onPress})=>{
+const Button = ({text, onPress, textColor})=>{
+
     return(
         <TouchableOpacity onPress={onPress} style={{height:58, backgroundColor:COLORS.primary, borderRadius:8,  justifyContent:'center'}}>
-            <Text style={{textAlign:'center', color:COLORS.text, fontFamily:'semibold', color:'#161622'}}>{text}</Text>
+            <Text style={{textAlign:'center', color:textColor ? textColor : '#161622', fontFamily:'semibold', }}>{text}</Text>
         </TouchableOpacity>
     )
 }

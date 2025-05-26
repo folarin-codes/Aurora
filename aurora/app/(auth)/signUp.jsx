@@ -53,11 +53,11 @@ import { useTheme } from "@react-navigation/native";
 
             <View style={authStyles.formContainer}>
                 <Text style={authStyles.formText}>Email</Text>
-                <TextInput style={[authStyles.input, {borderWidth:emailFocused ? 1 : 0, borderColor: emailFocused ? "#FF8F01": 'transparent'}]} cursorColor={'#FF8F01'} onFocus={()=>{
+                <TextInput placeholder="abcd@gmail.com" placeholderTextColor={'white'} style={[authStyles.input, {borderWidth:emailFocused ? 1 : 0, borderColor: emailFocused ? "#FF8F01": 'transparent'}]} cursorColor={'#FF8F01'} onFocus={()=>{
                     setEmailFocused(true)
                 }} onBlur={()=>{
                     setEmailFocused(false)
-                }}/>
+                }} keyboardType="email-address"/>
             </View>
 
             <View style={authStyles.formContainer}>
@@ -73,7 +73,11 @@ import { useTheme } from "@react-navigation/native";
 
                     setPasswordFocused(true)
                   
-                }}/>
+                }}
+
+                keyboardType="default"
+                
+                />
                 <View >
 
                         {
